@@ -1,0 +1,84 @@
+.card {
+  width: 100%;
+  height: 270px;
+  max-height: 300px;
+  overflow-y: scroll;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 10px;
+}
+.card::-webkit-scrollbar {
+  width: 0px;
+}
+.cardImgBox {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+}
+.cardImg {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: 0.25s ease;
+}
+.cardImg:hover {
+  transform: scale(1.3);
+  filter: blur(4px) brightness(40%);
+}
+.cardImg:hover ~ .cardYear {
+  transform: translateX(50px);
+}
+.cardImg:hover ~ .playIcon {
+  opacity: 1;
+}
+
+.cardTitleRating {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 80% 10%;
+}
+
+.cardTitleRating div:nth-child(1) {
+  white-space: nowrap;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cardTitleRating div:nth-child(2) {
+  float: right;
+  font-size: 12px;
+  color: rgb(255, 85, 0);
+}
+.cardTitle {
+  overflow: hidden;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.cardOverview {
+  line-height: 1.5em;
+  height: 3em;
+  width: 80%;
+  font-size: 10px;
+  margin-left: 10px;
+  font-family: system-ui;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+.cardTitleLink:hover {
+  color: var(--text-secundary-color);
+}
+.playIcon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  opacity: 0;
+  transition: 0.35s ease;
+  pointer-events: none;
+}

@@ -1,0 +1,29 @@
+.navBar {
+  position: fixed;
+  top: 0;
+  max-width: 100vw;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  background-color: white;
+  padding: 0 1.2rem;
+  z-index: 99;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.items {
+  display: flex;
+  vertical-align: middle;
+  gap: 10px;
+}
+.items svg {
+  font-size: var(--text-large);
+}
+.homeIcon {
+  width: 28px;
+  margin-right: 50px;
+}

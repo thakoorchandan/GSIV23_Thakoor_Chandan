@@ -1,0 +1,38 @@
+.title {
+  font-weight: 500;
+  font-size: var(--text-large);
+}
+.listHeadingTitle {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  vertical-align: middle;
+}
+.listHeadingFag {
+  width: 8px;
+  height: 100%;
+  background: var(--main-color);
+  border-radius: 10px;
+  display: flex;
+}
+.pathLink {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  color: var(--text-color);
+  transition: 0.2s ease;
+  gap: 4px;
+}
+.pathLink:hover {
+  color: var(--main-color);
+}
+.pathLink:hover ~ svg {
+  transform: translateX(-8px);
+}
+.listGrid {
+  padding: 5rem 2rem 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+  row-gap: 50px;
+  column-gap: 50px !important;
+}
