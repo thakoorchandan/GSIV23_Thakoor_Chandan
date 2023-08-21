@@ -37,7 +37,7 @@
 .cardTitleRating {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 80% 10%;
+  grid-template-columns: 60% 40%;
 }
 
 .cardTitleRating div:nth-child(1) {
@@ -46,7 +46,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cardTitleRating div:nth-child(2) {
+.cardTitleRating span {
   float: right;
   font-size: 12px;
   color: rgb(255, 85, 0);

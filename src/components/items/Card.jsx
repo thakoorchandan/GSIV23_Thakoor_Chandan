@@ -1,6 +1,7 @@
-import PlayIcon from "../../assets/img/play.png";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import Rating from "@mui/material/Rating";
+
+import PlayIcon from "../../assets/img/play.png";
 
 //Styles
 import styles from "./Card.module.css";
@@ -32,7 +33,7 @@ function Card({ id, title, image, overview, type, reloadDocument, rating }) {
 
       <div className={styles.cardTitleRating}>
         <div className={styles.cardTitle}>{title}</div>
-        <div>{rating}</div>
+        <Rating name="read-only" value={Math.floor(rating)} readOnly />
       </div>
       <div className={styles.cardOverview}>{overview}</div>
     </figure>

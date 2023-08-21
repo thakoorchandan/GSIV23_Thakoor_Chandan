@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Rating from "@mui/material/Rating";
 
 //Components
 import List from "../components/items/List";
@@ -43,7 +44,11 @@ function Movie() {
           <div className={styles.detailsData}>
             <div className={styles.titleRating}>
               <p>{movieData?.title}</p>
-              <span>{movieData?.vote_average}</span>
+              <Rating
+                name="read-only"
+                value={Math.floor(movieData?.vote_average)}
+                readOnly
+              />
             </div>
             <p>{`${movieData?.release_date} | ${movieData?.runtime} mins`}</p>
             <p>{movieData?.overview}</p>
