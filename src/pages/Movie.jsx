@@ -7,7 +7,7 @@ import List from "../components/items/List";
 import styles from "./Movie.module.css";
 
 function Movie() {
-  const { name, id } = useParams();
+  const { id } = useParams();
   const [movieData, setMovieData] = useState([]);
 
   useEffect(() => {
